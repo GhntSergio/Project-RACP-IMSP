@@ -5,7 +5,7 @@
 
 import LegalLayout, { LegalSection } from '../components/LegalLayout';
 
-const EMAIL = 'racp.imsp@gmail.com';
+const EMAIL = 'racp-imsp@racp-imsp.org';
 
 const Confidentialite = () => {
   return (

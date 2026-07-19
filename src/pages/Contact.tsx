@@ -50,7 +50,7 @@ const Contact = () => {
                     {
                       icon: <Mail className="h-6 w-6 text-primary" />,
                       label: "Email",
-                      value: "contact@racp-imsp.org",
+                      value: "racp-imsp@racp-imsp.org",
                       color: "bg-primary/10"
                     },
                     {

@@ -59,7 +59,7 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
-                <a href="mailto:contact@racp-imsp.org" className="hover:text-accent transition-colors break-all">contact@racp-imsp.org</a>
+                <a href="mailto:racp-imsp@racp-imsp.org" className="hover:text-accent transition-colors break-all">racp-imsp@racp-imsp.org</a>
               </li>
               <li className="flex items-start space-x-3">
                 <Globe className="h-5 w-5 text-accent shrink-0" />
