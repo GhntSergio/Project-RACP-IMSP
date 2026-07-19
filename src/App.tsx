@@ -20,6 +20,8 @@ const Contribute = lazy(() => import('./pages/Contribute'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Adhesion = lazy(() => import('./pages/Adhesion'));
 const Actualites = lazy(() => import('./pages/Actualites'));
+const Confidentialite = lazy(() => import('./pages/Confidentialite'));
+const MentionsLegales = lazy(() => import('./pages/MentionsLegales'));
 const AdminLayout = lazy(() => import('./components/admin/AdminLayout'));
 const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
 const Resources = lazy(() => import('./pages/admin/Resources'));
@@ -53,6 +55,8 @@ export default function App() {
           <Route path="/association/:slug" element={<Public Page={PoleDetail} />} />
           <Route path="/actualites" element={<Public Page={Actualites} />} />
           <Route path="/adhesion" element={<Public Page={Adhesion} />} />
+          <Route path="/confidentialite" element={<Public Page={Confidentialite} />} />
+          <Route path="/mentions-legales" element={<Public Page={MentionsLegales} />} />
           <Route path="/contribute" element={<Public Page={Contribute} />} />
           <Route path="/contact" element={<Public Page={Contact} />} />
 

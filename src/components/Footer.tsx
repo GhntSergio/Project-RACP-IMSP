@@ -73,8 +73,8 @@ const Footer = () => {
           <p>© 2026 RACP-IMSP. Excellence & Solidarité.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/admin" className="hover:text-white transition-colors">Administration</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Mentions Légales</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Confidentialité</Link>
+            <Link to="/mentions-legales" className="hover:text-white transition-colors">Mentions Légales</Link>
+            <Link to="/confidentialite" className="hover:text-white transition-colors">Confidentialité</Link>
           </div>
         </div>
       </div>
