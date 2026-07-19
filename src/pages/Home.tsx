@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { mockResources } from '../data/mockResources';
 import { POLES } from '../data/poles';
 import ResourceCard from '../components/ResourceCard';
-import heroImg from '@/Img/allee-arbres.jpg';
+import heroImg from '@/Img/photo.jpg';
 
 const Home = () => {
   const featuredResources = mockResources.slice(0, 4);
@@ -62,7 +62,7 @@ const Home = () => {
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-900 transform rotate-3 hover:rotate-0 transition-transform duration-700">
                 <img
                   src={heroImg}
-                  alt="Allée arborée du campus de l'IMSP"
+                  alt="Logo du Réseau Alumni des Classes Préparatoires de l'IMSP"
                   className="w-full h-[650px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>

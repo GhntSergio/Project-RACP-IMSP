@@ -5,8 +5,8 @@
 
 import { GraduationCap, Megaphone, Handshake, CalendarDays, type LucideIcon } from 'lucide-react';
 import salleDeCours from '@/Img/salle-de-cours.jpg';
-import panoramaCampus from '@/Img/panorama-campus.jpg';
-import batimentToiture from '@/Img/batiment-toiture-inclinee.jpg';
+import alleePalmiers from '@/Img/allee-palmiers.jpg';
+import flamboyant from '@/Img/flamboyant.jpg';
 import alleeAccesPalmiers from '@/Img/allee-acces-palmiers.jpg';
 
 export interface Pole {
@@ -58,7 +58,7 @@ export const POLES: Pole[] = [
       'Expansion nationale / internationale',
     ],
     icon: Megaphone,
-    image: panoramaCampus,
+    image: alleePalmiers,
   },
   {
     slug: 'partenariats-financement',
@@ -74,7 +74,7 @@ export const POLES: Pole[] = [
       'Gestion des cotisations',
     ],
     icon: Handshake,
-    image: batimentToiture,
+    image: flamboyant,
   },
   {
     slug: 'evenements-reseau',

@@ -10,7 +10,6 @@ import { POLES } from '../data/poles';
 import campusAerien from '@/Img/campus-aerien.jpg';
 import salleInformatique from '@/Img/salle-informatique.jpg';
 import portailImsp from '@/Img/portail-imsp.jpg';
-import flamboyant from '@/Img/flamboyant.jpg';
 
 const Association = () => {
   return (
@@ -220,8 +219,8 @@ const Association = () => {
               <div className="space-y-6 pt-12">
                 <div className="bg-primary h-24 rounded-[2rem]"></div>
                 <img
-                  src={flamboyant}
-                  alt="Flamboyant en fleurs sur le campus de l'IMSP"
+                  src={campusAerien}
+                  alt="Vue aérienne du campus de l'IMSP"
                   className="rounded-[2rem] shadow-lg w-full aspect-[3/4] object-cover border border-card-border"
                 />
               </div>
