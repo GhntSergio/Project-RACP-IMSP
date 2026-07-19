@@ -104,7 +104,7 @@ const PoleDetail = () => {
                   Ancien·ne de la prépa, partagez votre expérience et guidez un·e étudiant·e dans
                   son parcours. Quelques heures par mois suffisent pour faire la différence.
                 </p>
-                <Link to="/contact" className="academic-button">
+                <Link to="/devenir-parrain" className="academic-button">
                   <span>Je veux accompagner</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -120,14 +120,15 @@ const PoleDetail = () => {
                   Étudiant·e en prépa, bénéficiez des conseils d'un·e aîné·e qui est passé·e par là :
                   méthodes, orientation, motivation et mise en relation.
                 </p>
-                <Link to="/contact" className="academic-button">
+                <Link to="/devenir-filleul" className="academic-button">
                   <span>Je cherche un mentor</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
             <p className="text-center text-xs text-muted-foreground mt-8">
-              Les candidatures en ligne arrivent bientôt — en attendant, écrivez-nous.
+              Candidature en ligne en quelques minutes — le pôle Académique & Mentorat étudie chaque
+              demande.
             </p>
           </div>
         </section>

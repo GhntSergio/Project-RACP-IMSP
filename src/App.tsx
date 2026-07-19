@@ -22,6 +22,8 @@ const Adhesion = lazy(() => import('./pages/Adhesion'));
 const Actualites = lazy(() => import('./pages/Actualites'));
 const Confidentialite = lazy(() => import('./pages/Confidentialite'));
 const MentionsLegales = lazy(() => import('./pages/MentionsLegales'));
+const DevenirParrain = lazy(() => import('./pages/DevenirParrain'));
+const DevenirFilleul = lazy(() => import('./pages/DevenirFilleul'));
 const AdminLayout = lazy(() => import('./components/admin/AdminLayout'));
 const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
 const Resources = lazy(() => import('./pages/admin/Resources'));
@@ -53,6 +55,8 @@ export default function App() {
           <Route path="/resource/:id" element={<Public Page={ResourceDetail} />} />
           <Route path="/association" element={<Public Page={Association} />} />
           <Route path="/association/:slug" element={<Public Page={PoleDetail} />} />
+          <Route path="/devenir-parrain" element={<Public Page={DevenirParrain} />} />
+          <Route path="/devenir-filleul" element={<Public Page={DevenirFilleul} />} />
           <Route path="/actualites" element={<Public Page={Actualites} />} />
           <Route path="/adhesion" element={<Public Page={Adhesion} />} />
           <Route path="/confidentialite" element={<Public Page={Confidentialite} />} />
