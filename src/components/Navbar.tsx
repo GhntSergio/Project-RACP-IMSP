@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen, Search } from 'lucide-react';
+import { Menu, X, UserPlus } from 'lucide-react';
 import { cn } from '../lib/utils';
 import ThemeToggle from './ThemeToggle';
 import logoPng from '@/assets/brand/logo-racp.png';
@@ -16,6 +16,7 @@ const Navbar = () => {
     { name: 'Accueil', path: '/' },
     { name: "L'Association", path: '/association' },
     { name: 'Bibliothèque', path: '/library' },
+    { name: 'Actualités', path: '/actualites' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -67,12 +68,12 @@ const Navbar = () => {
               <div className="ml-4 pl-4 border-l border-white/10 flex items-center space-x-4">
                 <ThemeToggle />
                 <Link
-                  to="/library"
-                  className="btn-premium btn-primary !py-2.5 !px-6 text-[10px]"
+                  to="/adhesion"
+                  className="btn-premium !py-2.5 !px-6 text-[10px] bg-highlight text-white shadow-lg shadow-highlight/25 hover:opacity-90"
                 >
                   <div className="flex items-center space-x-2">
-                    <Search className="h-3.5 w-3.5" />
-                    <span>Explorer</span>
+                    <UserPlus className="h-3.5 w-3.5" />
+                    <span>Adhérer</span>
                   </div>
                 </Link>
               </div>
@@ -111,6 +112,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <Link
+              to="/adhesion"
+              onClick={() => setIsOpen(false)}
+              className="mt-2 flex items-center justify-center gap-2 px-3 py-3 rounded-md text-sm font-bold uppercase tracking-widest bg-highlight text-white hover:opacity-90 transition-all"
+            >
+              <UserPlus className="h-4 w-4" />
+              Adhérer
+            </Link>
           </div>
         </div>
       )}

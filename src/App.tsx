@@ -18,6 +18,8 @@ const Association = lazy(() => import('./pages/Association'));
 const PoleDetail = lazy(() => import('./pages/PoleDetail'));
 const Contribute = lazy(() => import('./pages/Contribute'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Adhesion = lazy(() => import('./pages/Adhesion'));
+const Actualites = lazy(() => import('./pages/Actualites'));
 const AdminLayout = lazy(() => import('./components/admin/AdminLayout'));
 const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
 const Resources = lazy(() => import('./pages/admin/Resources'));
@@ -49,6 +51,8 @@ export default function App() {
           <Route path="/resource/:id" element={<Public Page={ResourceDetail} />} />
           <Route path="/association" element={<Public Page={Association} />} />
           <Route path="/association/:slug" element={<Public Page={PoleDetail} />} />
+          <Route path="/actualites" element={<Public Page={Actualites} />} />
+          <Route path="/adhesion" element={<Public Page={Adhesion} />} />
           <Route path="/contribute" element={<Public Page={Contribute} />} />
           <Route path="/contact" element={<Public Page={Contact} />} />
 
