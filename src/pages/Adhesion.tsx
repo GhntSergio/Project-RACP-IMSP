@@ -17,8 +17,8 @@ import {
   BadgeCheck,
   PartyPopper,
 } from 'lucide-react';
-import flamboyant from '@/Img/flamboyant.jpg';
-import batimentPalmiers from '@/Img/batiment-palmiers.jpg';
+import entreePalmiers from '@/Img/entree-palmiers.jpg';
+import flamboyantBatiment from '@/Img/flamboyant-batiment.jpg';
 
 const GOOGLE_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSe2sCxVMVwlTNCQUS9cnwj_UWDeEXdGaxgQbrt35Vh1rdFZog/viewform';
@@ -61,8 +61,8 @@ const Adhesion = () => {
       {/* Hero */}
       <section className="relative academic-gradient text-white py-28 overflow-hidden">
         <img
-          src={flamboyant}
-          alt="Flamboyant en fleurs sur le campus de l'IMSP"
+          src={entreePalmiers}
+          alt="Entrée du campus de l'IMSP bordée de palmiers"
           className="absolute inset-0 w-full h-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 to-primary/90"></div>
@@ -191,8 +191,8 @@ const Adhesion = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary text-white rounded-[3rem] p-12 md:p-20 text-center overflow-hidden relative">
             <img
-              src={batimentPalmiers}
-              alt="Bâtiment de l'IMSP encadré de palmiers"
+              src={flamboyantBatiment}
+              alt="Flamboyant en fleurs devant un bâtiment de l'IMSP"
               className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/75"></div>

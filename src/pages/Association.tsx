@@ -8,9 +8,9 @@ import { motion } from 'motion/react';
 import { History, ArrowRight, Zap } from 'lucide-react';
 import { POLES } from '../data/poles';
 import campusAerien from '@/Img/campus-aerien.jpg';
-import facadePrincipale from '@/Img/facade-principale.jpg';
+import salleInformatique from '@/Img/salle-informatique.jpg';
 import portailImsp from '@/Img/portail-imsp.jpg';
-import monumentDrapeau from '@/Img/monument-drapeau.jpg';
+import flamboyant from '@/Img/flamboyant.jpg';
 
 const Association = () => {
   return (
@@ -83,8 +83,8 @@ const Association = () => {
             >
               <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-card-border">
                 <img
-                  src={facadePrincipale}
-                  alt="Façade principale de l'IMSP"
+                  src={salleInformatique}
+                  alt="Salle informatique de l'IMSP"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -220,8 +220,8 @@ const Association = () => {
               <div className="space-y-6 pt-12">
                 <div className="bg-primary h-24 rounded-[2rem]"></div>
                 <img
-                  src={monumentDrapeau}
-                  alt="Monument et drapeau du Bénin sur le campus"
+                  src={flamboyant}
+                  alt="Flamboyant en fleurs sur le campus de l'IMSP"
                   className="rounded-[2rem] shadow-lg w-full aspect-[3/4] object-cover border border-card-border"
                 />
               </div>
