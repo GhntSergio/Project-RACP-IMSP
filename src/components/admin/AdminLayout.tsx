@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link, useLocation, Outlet } from 'react-router-dom';
 import { 
   LayoutDashboard, 
@@ -16,6 +16,7 @@ import {
 import { cn } from '../../lib/utils';
 import ThemeToggle from '../ThemeToggle';
 import CommandPalette from '../CommandPalette';
+import PageLoader from '../PageLoader';
 
 const AdminLayout: React.FC = () => {
   const location = useLocation();
@@ -121,7 +122,9 @@ const AdminLayout: React.FC = () => {
 
         {/* Content Area */}
         <main className="flex-grow overflow-y-auto p-8 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
-          <Outlet />
+          <Suspense fallback={<PageLoader />}>
+            <Outlet />
+          </Suspense>
         </main>
       </div>
     </div>

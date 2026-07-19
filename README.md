@@ -1,20 +1,62 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# RACP-IMSP
 
-# Run and deploy your AI Studio app
+Plateforme officielle du **Réseau Alumni des Classes Préparatoires de l'IMSP**.
+*Excellence, Entraide et Visibilité.*
 
-This contains everything you need to run your app locally.
+Bibliothèque de ressources académiques, mentorat et mise en réseau des anciens et
+actuels étudiants des classes préparatoires de l'IMSP.
 
-View your app in AI Studio: https://ai.studio/apps/11241f75-2715-4058-8035-ed776850a137
+## Stack technique
 
-## Run Locally
+- **React 19** + **TypeScript**
+- **Vite 6** (build & serveur de dev)
+- **Tailwind CSS 4**
+- **React Router 7** (routing, avec chargement paresseux par route)
+- **Recharts** (tableau de bord admin), **Motion** (animations), **cmdk** (palette de commandes), **Sonner** (notifications)
 
-**Prerequisites:**  Node.js
+> Persistance des données prévue via **Supabase** (Postgres + Auth + Storage). En attendant,
+> l'application fonctionne sur des données de démonstration (`src/data/mockResources.ts`).
 
+## Prérequis
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Node.js ≥ 20** (Node 20 ou 22 LTS recommandé). React Router 7 et Tailwind 4 ne
+  fonctionnent pas sous Node 18.
+
+## Lancer en local
+
+1. Installer les dépendances :
+   ```bash
+   npm install
+   ```
+2. (Optionnel pour l'instant) copier `.env.example` en `.env.local` et renseigner les
+   variables — utile une fois le backend Supabase branché.
+3. Démarrer le serveur de développement :
+   ```bash
+   npm run dev
+   ```
+   L'application est servie sur http://localhost:3000.
+
+## Scripts
+
+| Commande | Description |
+|---|---|
+| `npm run dev` | Serveur de développement (port 3000) |
+| `npm run build` | Build de production dans `dist/` |
+| `npm run preview` | Prévisualise le build de production |
+| `npm run lint` | Vérification des types TypeScript (`tsc --noEmit`) |
+| `npm run clean` | Supprime le dossier `dist/` |
+
+## Structure
+
+```
+src/
+├── components/       Composants partagés (Navbar, Footer, ResourceCard, …)
+│   └── admin/        Layout et éléments de l'espace d'administration
+├── context/          Contextes React (thème clair/sombre)
+├── data/             Données de démonstration (mockResources)
+├── lib/              Utilitaires
+├── pages/            Pages publiques (Home, Library, About, Contact, …)
+│   └── admin/        Pages d'administration (Dashboard, Resources, …)
+├── App.tsx           Routing applicatif
+└── main.tsx          Point d'entrée
+```
