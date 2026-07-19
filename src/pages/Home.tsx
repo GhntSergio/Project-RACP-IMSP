@@ -43,7 +43,7 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link to="/association" className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/20 hover:scale-105 transition-transform flex items-center justify-center space-x-2">
+                <Link to="/adhesion" className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/20 hover:scale-105 transition-transform flex items-center justify-center space-x-2">
                   <span>Rejoindre le Réseau</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>

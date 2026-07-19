@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Search, Filter, SlidersHorizontal, ChevronDown, X, LayoutGrid, List } from 'lucide-react';
 import { mockResources } from '../data/mockResources';
 import { CATEGORIES, SUBJECTS, LEVELS, TYPES } from '../types';
@@ -7,8 +8,16 @@ import { cn } from '../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 
 const Library = () => {
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(searchParams.get('category'));
+
+  // Permet aux liens « Ressources » du footer d'ouvrir la bibliothèque déjà filtrée
+  // par catégorie (/library?category=...), y compris depuis la page bibliothèque.
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat) setSelectedCategory(cat);
+  }, [searchParams]);
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<string | null>(null);

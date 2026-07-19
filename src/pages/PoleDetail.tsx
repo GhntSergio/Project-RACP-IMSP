@@ -88,7 +88,7 @@ const PoleDetail = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Le mentorat RACP-IMSP</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Un accompagnement personnalisé qui relie les anciens (parrains et marraines) aux
-                étudiants actuels (filleul·e·s) : orientation, méthodologie de travail, choix de
+                étudiants actuels (filleul(e)s) : orientation, méthodologie de travail, choix de
                 filière et projets d'avenir. Un binôme, un suivi régulier, un impact concret.
               </p>
             </div>
@@ -101,7 +101,7 @@ const PoleDetail = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Devenir parrain / marraine</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8 flex-grow">
-                  Ancien·ne de la prépa, partagez votre expérience et guidez un·e étudiant·e dans
+                  Ancien(ne) de la prépa, partagez votre expérience et guidez un(e) étudiant(e) dans
                   son parcours. Quelques heures par mois suffisent pour faire la différence.
                 </p>
                 <Link to="/devenir-parrain" className="academic-button">
@@ -115,9 +115,9 @@ const PoleDetail = () => {
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
                   <Heart className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Être accompagné·e</h3>
+                <h3 className="text-xl font-bold mb-3">Être accompagné(e)</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8 flex-grow">
-                  Étudiant·e en prépa, bénéficiez des conseils d'un·e aîné·e qui est passé·e par là :
+                  Étudiant(e) en prépa, bénéficiez des conseils d'un(e) aîné(e) qui est passé(e) par là :
                   méthodes, orientation, motivation et mise en relation.
                 </p>
                 <Link to="/devenir-filleul" className="academic-button">
@@ -127,7 +127,7 @@ const PoleDetail = () => {
               </div>
             </div>
             <p className="text-center text-xs text-muted-foreground mt-8">
-              Candidature en ligne en quelques minutes — le pôle Académique & Mentorat étudie chaque
+              Candidature en ligne en quelques minutes. Le pôle Académique & Mentorat étudie chaque
               demande.
             </p>
           </div>

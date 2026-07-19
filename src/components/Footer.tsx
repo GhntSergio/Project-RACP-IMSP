@@ -46,10 +46,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-6 uppercase text-xs tracking-widest">Ressources</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/library" className="hover:text-accent transition-colors">Annales & Concours</Link></li>
-              <li><Link to="/library" className="hover:text-accent transition-colors">Cours Fondamentaux</Link></li>
-              <li><Link to="/library" className="hover:text-accent transition-colors">Orientation</Link></li>
-              <li><Link to="/library" className="hover:text-accent transition-colors">Méthodologie</Link></li>
+              <li><Link to={`/library?category=${encodeURIComponent('Annales et concours')}`} className="hover:text-accent transition-colors">Annales & Concours</Link></li>
+              <li><Link to={`/library?category=${encodeURIComponent('Ressources académiques fondamentales')}`} className="hover:text-accent transition-colors">Cours Fondamentaux</Link></li>
+              <li><Link to={`/library?category=${encodeURIComponent('Orientation académique et professionnelle')}`} className="hover:text-accent transition-colors">Orientation</Link></li>
+              <li><Link to={`/library?category=${encodeURIComponent('Méthodologie de travail')}`} className="hover:text-accent transition-colors">Méthodologie</Link></li>
             </ul>
           </div>
 

@@ -43,7 +43,7 @@ const annonces = [
     tag: 'Mentorat',
     date: 'Juillet 2026',
     title: 'Le programme de mentorat démarre',
-    desc: 'Appel à parrains/marraines et à filleul·e·s : construisons ensemble des binômes pour accompagner la nouvelle génération.',
+    desc: 'Appel à parrains/marraines et à filleul(e)s : construisons ensemble des binômes pour accompagner la nouvelle génération.',
     to: '/association/academique-mentorat',
     cta: 'En savoir plus',
   },
@@ -76,7 +76,7 @@ const Actualites = () => {
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">La vie du réseau</h1>
             <p className="text-xl text-blue-50/80 max-w-2xl mx-auto leading-relaxed font-sans font-light">
-              Annonces, événements et temps forts du RACP-IMSP — pour rester connecté·e à la
+              Annonces, événements et temps forts du RACP-IMSP, pour rester connecté(e) à la
               communauté.
             </p>
           </motion.div>
@@ -139,7 +139,7 @@ const Actualites = () => {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Recevez les actualités</h2>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Inscrivez-vous à la newsletter pour être prévenu·e des prochains événements et annonces
+            Inscrivez-vous à la newsletter pour être prévenu(e) des prochains événements et annonces
             du réseau.
           </p>
 

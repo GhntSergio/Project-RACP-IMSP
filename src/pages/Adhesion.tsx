@@ -30,7 +30,7 @@ const infos = [
   {
     icon: Scale,
     title: 'Droits & devoirs',
-    desc: 'Participer aux AG, voter, proposer, accéder aux ressources — dans le respect des textes du réseau.',
+    desc: 'Participer aux AG, voter, proposer, accéder aux ressources, dans le respect des textes du réseau.',
   },
   {
     icon: ArrowRight,
@@ -41,7 +41,7 @@ const infos = [
 
 const avantages = [
   { icon: Users, title: "L'annuaire des alumni", desc: 'Retrouvez vos promotions et élargissez votre réseau (à venir).' },
-  { icon: GraduationCap, title: 'Le mentorat', desc: "Accompagnez un·e étudiant·e ou bénéficiez d'un·e mentor." },
+  { icon: GraduationCap, title: 'Le mentorat', desc: "Accompagnez un(e) étudiant(e) ou bénéficiez d'un(e) mentor." },
   { icon: BookOpen, title: 'La bibliothèque', desc: 'Annales, fiches écoles, ressources vidéo et documents.' },
   { icon: CalendarDays, title: 'Les événements', desc: "Conférences, journées d'orientation et rencontres." },
   { icon: Vote, title: 'La voix au chapitre', desc: 'Participez aux décisions en assemblée générale.' },
@@ -184,7 +184,7 @@ const Adhesion = () => {
           <div className="bg-primary text-white rounded-[3rem] p-12 md:p-20 text-center overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Prêt·e à rejoindre le RACP-IMSP ?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Prêt(e) à rejoindre le RACP-IMSP ?</h2>
               <p className="text-blue-50/80 mb-10">L'adhésion ne prend que quelques minutes.</p>
               <a
                 href={GOOGLE_FORM_URL}

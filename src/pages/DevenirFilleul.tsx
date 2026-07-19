@@ -58,7 +58,7 @@ const steps: StepDef[] = [
       },
       {
         name: 'parental',
-        label: 'J’ai l’autorisation de mon responsable légal (si je suis mineur·e).',
+        label: 'J’ai l’autorisation de mon responsable légal (si je suis mineur(e)).',
         type: 'checkbox',
       },
     ],
@@ -68,7 +68,7 @@ const steps: StepDef[] = [
 const DevenirFilleul = () => (
   <MentoratForm
     title="Trouve ton mentor"
-    subtitle="Bénéficie des conseils d'un·e aîné·e passé·e par la prépa : méthodes, orientation, motivation."
+    subtitle="Bénéficie des conseils d'un(e) aîné(e) passé(e) par la prépa : méthodes, orientation, motivation."
     steps={steps}
     confirmTitle="Demande envoyée !"
     confirmMessage="Merci ! Le pôle Académique & Mentorat étudie ta demande et reviendra vers toi pour la mise en relation."

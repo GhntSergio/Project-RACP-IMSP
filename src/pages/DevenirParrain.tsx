@@ -38,7 +38,7 @@ const steps: StepDef[] = [
       { name: 'dispo', label: 'Disponibilité', placeholder: 'ex. 2h par mois', half: true },
       {
         name: 'capacite',
-        label: 'Nombre de filleul·e·s souhaité',
+        label: 'Nombre de filleul(e)s souhaité',
         type: 'select',
         half: true,
         options: ['1', '2', '3'],
@@ -64,7 +64,7 @@ const steps: StepDef[] = [
 const DevenirParrain = () => (
   <MentoratForm
     title="Devenez parrain / marraine"
-    subtitle="Partagez votre expérience et guidez un·e étudiant·e de la prépa. Quelques heures par mois suffisent."
+    subtitle="Partagez votre expérience et guidez un(e) étudiant(e) de la prépa. Quelques heures par mois suffisent."
     steps={steps}
     confirmTitle="Candidature envoyée !"
     confirmMessage="Merci pour votre engagement. Le pôle Académique & Mentorat reviendra vers vous pour la session de présentation."
