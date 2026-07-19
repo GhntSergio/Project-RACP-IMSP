@@ -9,11 +9,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  const isActive = (path: string) =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+
   const navLinks = [
     { name: 'Accueil', path: '/' },
+    { name: "L'Association", path: '/association' },
     { name: 'Bibliothèque', path: '/library' },
-    { name: 'À propos', path: '/about' },
-    { name: 'Contribuer', path: '/contribute' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -54,7 +56,7 @@ const Navbar = () => {
                   to={link.path}
                   className={cn(
                     "px-4 py-2 rounded-full text-xs font-sans font-bold uppercase tracking-widest transition-all duration-300",
-                    location.pathname === link.path
+                    isActive(link.path)
                       ? "text-accent bg-white/10"
                       : "text-white/70 hover:text-white hover:bg-white/5"
                   )}
@@ -101,7 +103,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={cn(
                   "block px-3 py-2 rounded-md text-base font-medium",
-                  location.pathname === link.path
+                  isActive(link.path)
                     ? "text-accent bg-white/10"
                     : "text-white/70 hover:text-white hover:bg-white/10"
                 )}

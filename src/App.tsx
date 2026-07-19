@@ -14,7 +14,8 @@ import PageLoader from './components/PageLoader';
 const Home = lazy(() => import('./pages/Home'));
 const Library = lazy(() => import('./pages/Library'));
 const ResourceDetail = lazy(() => import('./pages/ResourceDetail'));
-const About = lazy(() => import('./pages/About'));
+const Association = lazy(() => import('./pages/Association'));
+const PoleDetail = lazy(() => import('./pages/PoleDetail'));
 const Contribute = lazy(() => import('./pages/Contribute'));
 const Contact = lazy(() => import('./pages/Contact'));
 const AdminLayout = lazy(() => import('./components/admin/AdminLayout'));
@@ -46,12 +47,14 @@ export default function App() {
           <Route path="/" element={<Public Page={Home} />} />
           <Route path="/library" element={<Public Page={Library} />} />
           <Route path="/resource/:id" element={<Public Page={ResourceDetail} />} />
-          <Route path="/about" element={<Public Page={About} />} />
+          <Route path="/association" element={<Public Page={Association} />} />
+          <Route path="/association/:slug" element={<Public Page={PoleDetail} />} />
           <Route path="/contribute" element={<Public Page={Contribute} />} />
           <Route path="/contact" element={<Public Page={Contact} />} />
 
-          {/* Redirects for missing pages to avoid broken links */}
-          <Route path="/alumni" element={<Navigate to="/about" replace />} />
+          {/* Redirects for renamed/missing pages to avoid broken links */}
+          <Route path="/about" element={<Navigate to="/association" replace />} />
+          <Route path="/alumni" element={<Navigate to="/association" replace />} />
           <Route path="/support" element={<Navigate to="/contact" replace />} />
 
           {/* Admin Routes */}

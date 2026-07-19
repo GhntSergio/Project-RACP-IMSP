@@ -43,11 +43,11 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link to="/alumni" className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/20 hover:scale-105 transition-transform flex items-center justify-center space-x-2">
+                <Link to="/association" className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/20 hover:scale-105 transition-transform flex items-center justify-center space-x-2">
                   <span>Rejoindre le Réseau</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link to="/about" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
+                <Link to="/association" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center justify-center">
                   Notre Mission
                 </Link>
               </div>
