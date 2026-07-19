@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Users, GraduationCap, Lightbulb, ShieldCheck, Heart, Globe, Briefcase } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, ShieldCheck, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
-import { cn } from '../lib/utils';
 import { mockResources } from '../data/mockResources';
+import { POLES } from '../data/poles';
 import ResourceCard from '../components/ResourceCard';
 import photoJpg from '@/Img/photo.jpg';
 
@@ -114,55 +114,59 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Strategic Axes - Axe 1, 2, 3 */}
+      {/* Les 4 Pôles (teaser) */}
       <section className="py-32 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
-            <span className="text-primary dark:text-accent font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Nos Axes Stratégiques</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Trois Piliers pour l'Excellence</h2>
+          <div className="text-center mb-16">
+            <span className="text-primary dark:text-accent font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Notre organisation</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Les 4 Pôles</h2>
+            <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto font-sans">
+              L'action du réseau s'articule autour de quatre pôles complémentaires.
+            </p>
             <div className="w-12 h-1 bg-accent mx-auto mt-6"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <GraduationCap className="h-8 w-8" />,
-                title: "Soutenir les étudiants",
-                axe: "Axe 1",
-                desc: "Appui académique et matériel, bibliothèque partagée, tutorat et préparation aux concours d'excellence.",
-                color: "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
-              },
-              {
-                icon: <Globe className="h-8 w-8" />,
-                title: "Valoriser le réseau",
-                axe: "Axe 2",
-                desc: "Base de données exhaustive, plateforme interactive et promotion des parcours des diplômés à l'international.",
-                color: "bg-sky-50 dark:bg-sky-900/20 text-sky-600 dark:text-sky-400"
-              },
-              {
-                icon: <Briefcase className="h-8 w-8" />,
-                title: "Insertion & Carrière",
-                axe: "Axe 3",
-                desc: "Mentorat intergénérationnel, coaching, partenariats entreprises et soutien aux métiers émergents (IA, Data).",
-                color: "bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400"
-              }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group p-10 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-800 hover:shadow-2xl transition-all duration-500"
-              >
-                <div className={cn("w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500", item.color)}>
-                  {item.icon}
-                </div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">{item.axe}</span>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{item.title}</h3>
-                <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-sans text-sm">{item.desc}</p>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {POLES.map((pole, i) => {
+              const Icon = pole.icon;
+              return (
+                <motion.div
+                  key={pole.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <Link
+                    to={`/association/${pole.slug}`}
+                    className="group h-full flex flex-col p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary dark:text-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Icon className="h-7 w-7" />
+                    </div>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Pôle {pole.num}</span>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3">{pole.title}</h3>
+                    <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-sans text-sm flex-grow">{pole.mission}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-primary dark:text-accent font-bold uppercase tracking-widest text-[10px]">
+                      Découvrir
+                      <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <div className="text-center mt-14">
+            <Link
+              to="/association"
+              className="group inline-flex items-center gap-3 text-primary dark:text-accent font-bold text-sm uppercase tracking-widest"
+            >
+              <span>Découvrir l'association</span>
+              <div className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
