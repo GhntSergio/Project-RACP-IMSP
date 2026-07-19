@@ -46,6 +46,26 @@ actuels étudiants des classes préparatoires de l'IMSP.
 | `npm run lint` | Vérification des types TypeScript (`tsc --noEmit`) |
 | `npm run clean` | Supprime le dossier `dist/` |
 
+## Déploiement
+
+Hébergé sur **Cloudflare** (Workers + assets statiques), en déploiement continu depuis
+la branche `main` : chaque `push` déclenche un build puis une mise en production.
+
+Configuration côté Cloudflare (dashboard → *Settings › Build*) :
+
+| Réglage | Valeur |
+|---|---|
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Build output directory | `dist` |
+| Variable de build | `NODE_VERSION` = `22` |
+
+> **Node 22 est requis** : l'outil de déploiement (wrangler) exige Node ≥ 22. Le pipeline
+> Workers Builds n'honore pas le fichier `.node-version` — la version doit être fixée via la
+> **variable de build `NODE_VERSION`** dans le dashboard. Le routing SPA (liens profonds
+> `/library`, `/admin`…) est géré par Cloudflare (`not_found_handling: single-page-application`) ;
+> ne pas ajouter de fichier `public/_redirects` (rejeté en mode Workers).
+
 ## Structure
 
 ```
