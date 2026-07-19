@@ -7,12 +7,22 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { History, ArrowRight, Zap } from 'lucide-react';
 import { POLES } from '../data/poles';
+import campusAerien from '@/Img/campus-aerien.jpg';
+import facadePrincipale from '@/Img/facade-principale.jpg';
+import portailImsp from '@/Img/portail-imsp.jpg';
+import monumentDrapeau from '@/Img/monument-drapeau.jpg';
 
 const Association = () => {
   return (
     <div className="min-h-screen bg-app text-app transition-colors duration-300">
       {/* Header */}
       <section className="relative academic-gradient text-white py-32 overflow-hidden">
+        <img
+          src={campusAerien}
+          alt="Vue aérienne du campus de l'IMSP"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 to-primary/90"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -73,10 +83,9 @@ const Association = () => {
             >
               <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-card-border">
                 <img
-                  src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=800&h=450&auto=format&fit=crop"
-                  alt="Campus IMSP"
+                  src={facadePrincipale}
+                  alt="Façade principale de l'IMSP"
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-8 rounded-2xl shadow-xl hidden md:block">
@@ -202,20 +211,18 @@ const Association = () => {
             <div className="flex-1 grid grid-cols-2 gap-6">
               <div className="space-y-6">
                 <img
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400&h=500&auto=format&fit=crop"
-                  alt="IMSP 1"
+                  src={portailImsp}
+                  alt="Portail d'entrée de l'IMSP"
                   className="rounded-[2rem] shadow-lg w-full aspect-[3/4] object-cover border border-card-border"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="bg-accent h-24 rounded-[2rem]"></div>
               </div>
               <div className="space-y-6 pt-12">
                 <div className="bg-primary h-24 rounded-[2rem]"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=400&h=500&auto=format&fit=crop"
-                  alt="IMSP 2"
+                  src={monumentDrapeau}
+                  alt="Monument et drapeau du Bénin sur le campus"
                   className="rounded-[2rem] shadow-lg w-full aspect-[3/4] object-cover border border-card-border"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

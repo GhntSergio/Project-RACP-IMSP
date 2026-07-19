@@ -17,6 +17,8 @@ import {
   BadgeCheck,
   PartyPopper,
 } from 'lucide-react';
+import flamboyant from '@/Img/flamboyant.jpg';
+import batimentPalmiers from '@/Img/batiment-palmiers.jpg';
 
 const GOOGLE_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSe2sCxVMVwlTNCQUS9cnwj_UWDeEXdGaxgQbrt35Vh1rdFZog/viewform';
@@ -58,6 +60,12 @@ const Adhesion = () => {
     <div className="min-h-screen bg-app text-app transition-colors duration-300">
       {/* Hero */}
       <section className="relative academic-gradient text-white py-28 overflow-hidden">
+        <img
+          src={flamboyant}
+          alt="Flamboyant en fleurs sur le campus de l'IMSP"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 to-primary/90"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -182,6 +190,12 @@ const Adhesion = () => {
       <section className="py-24 bg-app">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary text-white rounded-[3rem] p-12 md:p-20 text-center overflow-hidden relative">
+            <img
+              src={batimentPalmiers}
+              alt="Bâtiment de l'IMSP encadré de palmiers"
+              className="absolute inset-0 w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/75"></div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Prêt(e) à rejoindre le RACP-IMSP ?</h2>

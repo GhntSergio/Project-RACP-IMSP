@@ -4,6 +4,10 @@
  */
 
 import { GraduationCap, Megaphone, Handshake, CalendarDays, type LucideIcon } from 'lucide-react';
+import salleDeCours from '@/Img/salle-de-cours.jpg';
+import galerieCouverte from '@/Img/galerie-couverte.jpg';
+import batimentToiture from '@/Img/batiment-toiture-inclinee.jpg';
+import alleePalmiers from '@/Img/allee-palmiers.jpg';
 
 export interface Pole {
   slug: string;
@@ -14,6 +18,8 @@ export interface Pole {
   mission: string;
   responsibilities: string[];
   icon: LucideIcon;
+  /** Photo illustrant le pôle (bannière sur la page pôle) */
+  image: string;
 }
 
 /**
@@ -35,6 +41,7 @@ export const POLES: Pole[] = [
       'Suivi des bénéficiaires',
     ],
     icon: GraduationCap,
+    image: salleDeCours,
   },
   {
     slug: 'communication-developpement',
@@ -51,6 +58,7 @@ export const POLES: Pole[] = [
       'Expansion nationale / internationale',
     ],
     icon: Megaphone,
+    image: galerieCouverte,
   },
   {
     slug: 'partenariats-financement',
@@ -66,6 +74,7 @@ export const POLES: Pole[] = [
       'Gestion des cotisations',
     ],
     icon: Handshake,
+    image: batimentToiture,
   },
   {
     slug: 'evenements-reseau',
@@ -81,6 +90,7 @@ export const POLES: Pole[] = [
       'Animation du réseau régional',
     ],
     icon: CalendarDays,
+    image: alleePalmiers,
   },
 ];
 

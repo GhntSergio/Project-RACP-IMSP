@@ -48,6 +48,15 @@ const PoleDetail = () => {
         </div>
       </section>
 
+      {/* Bannière photo du pôle */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20">
+        <img
+          src={pole.image}
+          alt={`Illustration du pôle ${pole.title}`}
+          className="w-full h-64 md:h-96 object-cover rounded-[2rem] shadow-2xl border border-card-border"
+        />
+      </div>
+
       {/* Responsabilités */}
       <section className="py-24 bg-app">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

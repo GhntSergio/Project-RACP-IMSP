@@ -18,6 +18,7 @@ import {
   Instagram,
   Linkedin,
 } from 'lucide-react';
+import coucherSoleil from '@/Img/coucher-soleil.jpg';
 
 const annonces = [
   {
@@ -173,15 +174,23 @@ const Actualites = () => {
       <section className="py-24 bg-app">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Événements à venir */}
-          <div className="p-10 rounded-[2.5rem] bg-card-bg border border-card-border">
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
-              <CalendarDays className="h-7 w-7" />
+          <div className="relative overflow-hidden p-10 rounded-[2.5rem] border border-card-border">
+            <img
+              src={coucherSoleil}
+              alt="Coucher de soleil sur le campus de l'IMSP"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/40"></div>
+            <div className="relative z-10 text-white">
+              <div className="w-14 h-14 rounded-2xl bg-white/15 text-white flex items-center justify-center mb-6">
+                <CalendarDays className="h-7 w-7" />
+              </div>
+              <h2 className="text-2xl font-bold mb-3 text-white">Événements à venir</h2>
+              <p className="text-blue-50/90 leading-relaxed">
+                Conférences, journées d'orientation et rencontres alumni seront annoncées ici très
+                bientôt. Inscrivez-vous à la newsletter pour ne rien manquer.
+              </p>
             </div>
-            <h2 className="text-2xl font-bold mb-3">Événements à venir</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Conférences, journées d'orientation et rencontres alumni seront annoncées ici très
-              bientôt. Inscrivez-vous à la newsletter pour ne rien manquer.
-            </p>
           </div>
 
           {/* Réseaux sociaux */}
