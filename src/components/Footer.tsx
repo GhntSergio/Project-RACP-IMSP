@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Mail, Facebook, Twitter, Linkedin, Globe, Instagram } from 'lucide-react';
-import logoPng from '@/Img/LOGO PNG.png';
+import logoPng from '@/assets/brand/logo-racp.png';
 
 const Footer = () => {
   return (

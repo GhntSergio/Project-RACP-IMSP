@@ -1,37 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: #1e3a8a; /* Logo Dark Blue */
+  /* Palette officielle — couleurs exactes du logo RACP-IMSP */
+  --color-primary: #27436F; /* navy — figure foncée du logo */
   --color-primary-foreground: #ffffff;
-  --color-accent: #0ea5e9; /* Logo Medium Blue */
+  --color-accent: #00ADEE; /* cyan — accent connectif du logo */
   --color-accent-foreground: #ffffff;
-  --color-secondary: #38bdf8; /* Logo Light Blue */
-  --color-muted: #f8fafc;
-  --color-muted-foreground: #64748b;
-  --color-border: #e2e8f0;
-  
+  --color-secondary: #0073A4; /* bleu médian du logo */
+  --color-secondary-foreground: #ffffff;
+  --color-highlight: #E0631A; /* orange — unique accent chaud, réservé aux actions */
+  --color-highlight-foreground: #ffffff;
+  --color-muted: #F4F8F8;
+  --color-muted-foreground: #5b6b78;
+  --color-border: #dbe6ec;
+
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   :root {
-    --bg-app: #fdfdfd;
-    --text-app: #0f172a;
+    --bg-app: #F4F8F8;
+    --text-app: #15222e;
     --card-bg: #ffffff;
-    --card-border: #e2e8f0;
+    --card-border: #dbe6ec;
     --sidebar-bg: #ffffff;
   }
 
   .dark {
-    --bg-app: #020617;
-    --text-app: #f8fafc;
-    --card-bg: #0f172a;
-    --card-border: #1e293b;
-    --sidebar-bg: #0f172a;
+    --bg-app: #0d1b2e;
+    --text-app: #f4f8f8;
+    --card-bg: #16263f;
+    --card-border: #1f3556;
+    --sidebar-bg: #16263f;
   }
 
   body {
@@ -39,7 +44,7 @@
   }
   
   h1, h2, h3, h4 {
-    @apply font-serif tracking-tight;
+    @apply font-display tracking-tight;
   }
 }
 
@@ -56,7 +61,7 @@
 }
 
 .academic-gradient {
-  background: radial-gradient(circle at top left, #003d7a 0%, #002b56 100%);
+  background: radial-gradient(circle at top left, #27436F 0%, #16263f 100%);
 }
 
 .section-title {

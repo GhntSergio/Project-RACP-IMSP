@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, BookOpen, Search } from 'lucide-react';
 import { cn } from '../lib/utils';
 import ThemeToggle from './ThemeToggle';
-import logoPng from '@/Img/LOGO PNG.png';
+import logoPng from '@/assets/brand/logo-racp.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
